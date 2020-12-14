@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Tickets page{% endblock %}
+{% block content %}
+<h2>Datail tickets</h2>
+<p>Name: {{form.name}}</p>
+<p>From where: {{form.from_where}}</p>
+<p>Where to: {{form.where_to}}</p>
+<p>Date: {{form.date}}</p>
+<p>Amount of peoples: {{form.amount_of_peoples}}</p>
+<p>Price: {{form.price}}$.</p>
+{% endblock %}
