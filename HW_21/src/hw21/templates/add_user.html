@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %} Add user {% endblock %}
+{% block content %}
+    <h3 style="color:red;">Add user</h3>
+    <form action={% url "add_user" %} method="POST">
+        {{ form.as_p }}
+        <input style="color:green;" type="submit" value="Submit"/>
+        <input type="reset" value="Clear"/>
+    </form>
+{% endblock %}

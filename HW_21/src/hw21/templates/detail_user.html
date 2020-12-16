@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %} Detail user {% endblock %}
+{% block content %}
+    <h3 style="color:red;">Detail user</h3>
+    <p>ID: {{ user.id }}</p>
+    <p>First name: {{ user.first_name }}</p>
+    <p>Last name: {{ user.last_name }}</p>
+    <p>Age: {{ user.age }}</p>
+    <p>Profession: {{ user.profession }}</p>
+    <form action={% url "edit_user" user.id %} method="GET">
+        <input style="color:green;" type="submit" value="Edit"/>
+    </form>
+    <br>
+    <form action={% url "delete_user" user.id %} method="POST">
+        <input type="submit" value="Delete"/>
+    </form>
+{% endblock %}
