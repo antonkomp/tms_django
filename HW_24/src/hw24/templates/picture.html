@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %} Picture {% endblock %}
+
+{% block content %}
+    <img src="{{ picture_link }}">
+    <form action={% url "save_picture" %} method="POST">
+        <textarea placeholder="Comment" name="comment"></textarea><br>
+        <input type="submit" value="Save picture">
+    </form>
+    <form action={% url "home" %} method="GET">
+        <input type="submit" value="Home page">
+    </form>
+{% endblock %}
