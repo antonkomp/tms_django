@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %} Home page {% endblock %}
+
+{% block content %}
+    <form action={% url "home" %} method="POST">
+        {{ form.as_p }}
+        <input type="submit" value="Get">
+    </form>
+{% endblock %}
